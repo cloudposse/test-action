@@ -1,7 +1,3 @@
-const path = require('path');
-const {readFileSync} = require("fs");
-
-
 /**
  * @param {Object} octokit
  * @param {Object} context
