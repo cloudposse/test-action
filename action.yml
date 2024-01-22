@@ -5,7 +5,7 @@ branding:
   icon: 'file'
   color: 'white'
 inputs:
-  param1:
+  sha:
     required: true
     description: "Input parameter placeholder"
     default: "true"
