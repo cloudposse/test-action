@@ -17,7 +17,7 @@ const runAction = async (octokit, context, parameters) => {
     ref: sha
   });
 
-  console.log(github);
+  console.log(process.env);
 
   suites.data.check_runs
     .filter( item => { return item.name == "Plan (plat-sandbox) / plat-ue2-sandbox-test-drift-04"})
