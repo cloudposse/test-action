@@ -21,7 +21,9 @@ const runAction = async (octokit, context, parameters) => {
 
   console.log(suites);
 
-  suites.data.check_runs.forEach(item => { console.log(item) });
+  suites.data.check_runs
+    .filter( item => { return item.name == "Plan (plat-sandbox) / plat-ue2-sandbox-test-drift-04"})
+    .forEach(item => { console.log(item) });
 
 }
 
