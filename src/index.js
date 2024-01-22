@@ -1,6 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const {runAction} = require("../../atmos/terraform/drift-detection/src/action");
+const {runAction} = require("./action");
+
 
 try {
     // Get params
