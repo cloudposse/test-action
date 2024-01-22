@@ -9,6 +9,9 @@ inputs:
     required: true
     description: "Input parameter placeholder"
     default: "true"
+  id:
+    required: true
+    description: "Input parameter placeholder"
   token:
     description:
       Used to pull node distributions for Atmos from Cloud Posse's GitHub repository. Since there's a default, this is typically

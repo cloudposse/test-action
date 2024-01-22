@@ -8,6 +8,7 @@ const github = require('@actions/github');
 const runAction = async (octokit, context, parameters) => {
   const {
     sha = "",
+    id = ""
   } = parameters;
 
   // Run action
@@ -20,7 +21,7 @@ const runAction = async (octokit, context, parameters) => {
   console.log(process.env);
 
   suites.data.check_runs
-    .filter( item => { return item.name == "Plan (plat-sandbox) / plat-ue2-sandbox-test-drift-04"})
+    .filter( item => { return item.name == id})
     .forEach(item => { console.log(item) });
 
 }
