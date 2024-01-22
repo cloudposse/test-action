@@ -1,3 +1,5 @@
+const github = require('@actions/github');
+
 /**
  * @param {Object} octokit
  * @param {Object} context
@@ -15,7 +17,7 @@ const runAction = async (octokit, context, parameters) => {
     ref: sha
   });
 
-  console.log(context);
+  console.log(github);
 
   suites.data.check_runs
     .filter( item => { return item.name == "Plan (plat-sandbox) / plat-ue2-sandbox-test-drift-04"})
