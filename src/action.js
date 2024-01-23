@@ -28,7 +28,14 @@ const runAction = async (octokit, context, parameters) => {
     .filter( item => { return item.name == id})
     .map(item => { return item.id }).pop()
 
-  console.log(suite_id);
+  await octokit.rest.checks.update({
+    owner: context.repo.owner,
+    repo: context.repo.repo,
+    suite_id,
+    output: {
+      summary: "Test"
+    }
+  });
 }
 
 module.exports = {
