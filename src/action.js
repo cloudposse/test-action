@@ -24,6 +24,11 @@ const runAction = async (octokit, context, parameters) => {
     .filter( item => { return item.name == id})
     .forEach(item => { console.log(item) });
 
+  const suite_id = suites.data.check_runs
+    .filter( item => { return item.name == id})
+    .map(item => { return item.id }).pop()
+
+  console.log(suite_id);
 }
 
 module.exports = {
