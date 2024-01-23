@@ -26,6 +26,7 @@ const runAction = async (octokit, context, parameters) => {
     owner: context.repo.owner,
     repo: context.repo.repo,
     check_run_id: suite_id,
+    details_url: "https://github.com/cloudposse/infra-test/test",
     output: {
       title: "Test title",
       summary: "Test"
@@ -33,6 +34,16 @@ const runAction = async (octokit, context, parameters) => {
   });
 
   console.log(test);
+
+  await octokit.rest.checks.listForRef({
+    owner: context.repo.owner,
+    repo: context.repo.repo,
+    ref: sha
+  }).then( item => {
+    item.data.check_runs
+      .filter( item => { return item.name == id})
+      .map(item => { return item.id }).pop()
+  })
 }
 
 module.exports = {
