@@ -18,12 +18,6 @@ const runAction = async (octokit, context, parameters) => {
     ref: sha
   });
 
-  console.log(process.env);
-
-  suites.data.check_runs
-    .filter( item => { return item.name == id})
-    .forEach(item => { console.log(item) });
-
   const suite_id = suites.data.check_runs
     .filter( item => { return item.name == id})
     .map(item => { return item.id }).pop()
