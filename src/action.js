@@ -31,7 +31,7 @@ const runAction = async (octokit, context, parameters) => {
   const test = await octokit.rest.checks.update({
     owner: context.repo.owner,
     repo: context.repo.repo,
-    suite_id,
+    check_run_id: suite_id,
     output: {
       summary: "Test"
     }
