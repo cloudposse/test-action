@@ -26,8 +26,6 @@ const runAction = async (octokit, context, parameters) => {
     owner: context.repo.owner,
     repo: context.repo.repo,
     check_run_id: suite_id,
-    url: "https://github.com/cloudposse/infra-test/test",
-    html_url: "https://github.com/cloudposse/infra-test/test",
     details_url: "https://github.com/cloudposse/infra-test/test",
     output: {
       title: "Test title",
