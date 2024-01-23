@@ -27,6 +27,7 @@ const runAction = async (octokit, context, parameters) => {
     repo: context.repo.repo,
     check_run_id: suite_id,
     output: {
+      title: "Test title",
       summary: "Test"
     }
   });
