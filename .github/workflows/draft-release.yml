@@ -12,5 +12,5 @@ jobs:
       # Drafts your next Release notes as Pull Requests are merged into "main"
       - uses: cloudposse/github-action-auto-release@use-custom-pr-info
         with:
-          publish: false
+          publish: true
           prerelease: false
