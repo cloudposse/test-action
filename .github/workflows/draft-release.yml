@@ -1,0 +1,16 @@
+name: auto-release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      # Drafts your next Release notes as Pull Requests are merged into "main"
+      - uses: cloudposse/github-action-auto-release@use-custom-pr-info
+        with:
+          publish: false
+          prerelease: false
