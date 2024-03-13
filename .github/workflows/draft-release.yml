@@ -8,7 +8,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: action-release
+    environment: auto-release
     steps:
       - uses: actions/create-github-app-token@v1
         id: github-app
