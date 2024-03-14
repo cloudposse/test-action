@@ -17,10 +17,8 @@ version-resolver:
       - 'bugfix'
       - 'bug'
       - 'hotfix'
+      - 'no-release'
   default: 'minor'
-
-exclude-labels:
-  - 'no-release'
 
 categories:
   - title: '🚀 Enhancements'
