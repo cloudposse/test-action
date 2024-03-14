@@ -12,3 +12,4 @@ jobs:
       publish: true
       prerelease: false
       config-name: auto-release-config.yml
+    secrets: inherit
