@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  publish:
+  auto:
     uses: cloudposse/.github/.github/workflows/shared-auto-release.yml@shared-auto-release
     with:
       publish: true
