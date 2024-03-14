@@ -1,0 +1,16 @@
+name: auto-release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    uses: cloudposse/.github/.github/workflows/shared-auto-release.yml@shared-auto-release
+    runs-on: ubuntu-latest
+    environment: auto-release
+    with:
+      publish: true
+      prerelease: false
+      config-name: auto-release-config.yml
