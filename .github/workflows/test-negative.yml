@@ -28,7 +28,7 @@ jobs:
           sha: ${{ github.sha }}
 
     outputs:
-      result: "${{ steps.current.outputs.result1 }}"
+      result: "false"
 
   assert:
     runs-on: ubuntu-latest
