@@ -1,0 +1,16 @@
+name: Release
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  perform:
+    uses: cloudposse/github-actions-workflows-github-action-composite/.github/workflows/release.yml@get-rid-pat
+    with:
+      organization: "${{ github.event.repository.owner.login }}"
+      repository: "${{ github.event.repository.name }}"
+      version: ${{ github.event.release.tag_name }}
+    secrets: inherit

@@ -1,4 +1,4 @@
-name: Test example positive
+name: Test example negative
 on:
 #  # Uncomment when test added first time to register workflow and comment it back after workflow would be registered
 #  #
@@ -16,8 +16,8 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    continue-on-error: true
     needs: [setup]
+    continue-on-error: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,10 +25,10 @@ jobs:
       - uses: ./
         id: current
         with:
-          param1: 'true'
+          sha: ${{ github.sha }}
 
     outputs:
-      result: "${{ steps.current.outputs.result1 }}"
+      result: "false"
 
   assert:
     runs-on: ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: nick-fields/assert-action@v1
         with:
-          expected: 'true'
+          expected: 'false'
           actual: "${{ needs.test.outputs.result }}"
 
   teardown:
