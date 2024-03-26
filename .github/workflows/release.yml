@@ -13,3 +13,4 @@ jobs:
       organization: "${{ github.event.repository.owner.login }}"
       repository: "${{ github.event.repository.name }}"
       version: ${{ github.event.release.tag_name }}
+    secrets: inherit
