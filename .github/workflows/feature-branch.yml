@@ -1,7 +1,9 @@
 name: Feature branch
 on:
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - release/v*
     types: [opened, synchronize, reopened]
 
 permissions:
