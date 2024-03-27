@@ -20,6 +20,6 @@ inputs:
     default: ${{ github.server_url == 'https://github.com' && github.token || '' }}
 
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'src/index.js'
   post: 'src/post.js'
