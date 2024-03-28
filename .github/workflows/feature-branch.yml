@@ -11,6 +11,12 @@ permissions:
   actions: write
 
 jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug
+        run: echo '${{ toJSON(github) }}'
+
   perform:
     uses: cloudposse/github-actions-workflows-github-action-composite/.github/workflows/feature-branch.yml@get-rid-pat
     with:
