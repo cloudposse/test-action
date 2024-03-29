@@ -270,6 +270,10 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 |---|
 <!-- markdownlint-restore -->
 
+
+
+
+
   [goruha_homepage]: https://github.com/goruha
   [goruha_avatar]: https://img.cloudposse.com/150x150/https://github.com/goruha.png
 
