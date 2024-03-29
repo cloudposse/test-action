@@ -23,7 +23,3 @@ runs:
   main: 'src/index.js'
   post: 'src/post.js'
 
-
-
-
-
