@@ -1,5 +1,5 @@
 # These settings are synced to GitHub by https://probot.github.io/apps/settings/
-# extends: cloudposse/.github
+extends: cloudposse/.github
 
 repository:
   # A URL with more information about the repository
@@ -16,7 +16,4 @@ environments:
   - name: release2
     deployment_branch_policy:
       custom_branches:
-        - name: main
-          type: branch
-        - name: release/**
-          type: branch
+        - '{"name": "main", "type": "branch"}'
