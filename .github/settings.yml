@@ -20,7 +20,3 @@ environments:
           type: branch
         - name: release/**
           type: branch
-        - name: "*.*.*"
-          type: tag
-        - name: v*
-          type: tag
