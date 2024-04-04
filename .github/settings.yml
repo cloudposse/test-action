@@ -16,4 +16,4 @@ environments:
   - name: release2
     deployment_branch_policy:
       custom_branches:
-        - '{"name": "main", "type": "branch"}'
+        - main
