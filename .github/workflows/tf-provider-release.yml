@@ -1,7 +1,8 @@
-name: Release
+name: Terraform provider Release
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - '*.*.*'
 
 permissions:
   id-token: write
@@ -15,7 +16,7 @@ jobs:
         run: echo '${{ toJSON(github) }}'
 
   perform:
-    uses: cloudposse/github-actions-workflows-github-action-composite/.github/workflows/shared-tf-provider-release.yml@get-rid-pat
+    uses: cloudposse/.github/.github/workflows/shared-tf-provider-release.yml@get-rid-pat
     with:
       organization: "${{ github.event.repository.owner.login }}"
       repository: "${{ github.event.repository.name }}"
