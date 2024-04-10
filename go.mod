@@ -1,3 +1,3 @@
 module cloudposse/github-action-test-action
 
-go 1.23
+go 1.22
