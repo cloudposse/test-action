@@ -7,6 +7,3 @@ import (
 func main() {
 	log.Print("Hello, World!")
 }
-
-
-
