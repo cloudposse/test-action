@@ -52,7 +52,10 @@ checksum:
 #      - "${artifact}"
 
 release:
-  draft: false
+  draft: true
+  replace_existing_draft: true
+  replace_existing_artifacts: true
+  mode: keep-existing
   make_latest: false
   target_commitish: "{{ .Commit }}"
   # If you want to manually examine the release before its live, uncomment this line:
