@@ -58,7 +58,7 @@ release:
   replace_existing_artifacts: true
   mode: keep-existing
   make_latest: false
-  Default: 'v{{.Tag}}'
+  name_template: 'v{{.Tag}}'
   # target_commitish: "{{ .Commit }}"
   # If you want to manually examine the release before its live, uncomment this line:
   # draft: true
