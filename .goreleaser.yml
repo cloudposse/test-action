@@ -52,7 +52,7 @@ checksum:
 #      - "${artifact}"
 
 release:
-  draft: true
+  draft: false
   make_latest: false
   target_commitish: "{{ .Branch }}"
   # If you want to manually examine the release before its live, uncomment this line:
