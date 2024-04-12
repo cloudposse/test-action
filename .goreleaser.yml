@@ -60,7 +60,7 @@ release:
   mode: keep-existing
   make_latest: false
   name_template: 'v{{.Tag}}'
-  target_commitish: "{{ .Commit }}"
+  target_commitish: "{{ .Branch }}"
   # If you want to manually examine the release before its live, uncomment this line:
   # draft: true
 
