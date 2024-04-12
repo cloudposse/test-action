@@ -15,7 +15,7 @@ jobs:
         run: echo '${{ toJSON(github) }}'
 
   perform:
-    uses: cloudposse/github-actions-workflows-github-action-composite/.github/workflows/release.yml@get-rid-pat
+    uses: cloudposse/github-actions-workflows-github-action-composite/.github/workflows/release.yml@main-branch-go-releaser
     with:
       organization: "${{ github.event.repository.owner.login }}"
       repository: "${{ github.event.repository.name }}"
