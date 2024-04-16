@@ -53,7 +53,7 @@ signs:
 
 release:
   draft: true
-  replace_existing_draft: false
+  replace_existing_draft: true
   replace_existing_artifacts: true
   mode: keep-existing
   make_latest: false
