@@ -1,11 +1,3 @@
-
-
-<!-- markdownlint-disable -->
-<a href="https://cpco.io/homepage"><img src=".github/banner.png?raw=true" alt="Project Banner"/></a><br/>
-    <p align="right">
-<a href="https://github.com/cloudposse/example-github-action-composite/releases/latest"><img src="https://img.shields.io/github/release/cloudposse/example-github-action-composite.svg" alt="Latest Release"/></a><a href="https://slack.cloudposse.com"><img src="https://slack.cloudposse.com/badge.svg" alt="Slack Community"/></a></p>
-<!-- markdownlint-restore -->
-
 <!--
 
 
