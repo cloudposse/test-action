@@ -4,18 +4,18 @@ on:
     branches:
       - main
       - release/v*
+    paths-ignore:
+      - '.github/**'
+      - 'docs/**'
+      - 'examples/**'
+      - 'test/**'
+      - 'README.md'
 
 permissions:
   contents: write
   actions: write
 
 jobs:
-  debug:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Debug
-        run: echo '${{ toJSON(github) }}'
-
   perform:
-    uses: cloudposse/github-actions-workflows-github-action-composite/.github/workflows/main-branch.yml@readme-update
+    uses: cloudposse/github-actions-workflows-github-action-composite/.github/workflows/main-branch.yml@main
     secrets: inherit
