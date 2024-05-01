@@ -11,16 +11,6 @@ permissions:
   actions: write
 
 jobs:
-  debug:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Debug
-        run: echo '${{ toJSON(github) }}'
-
   perform:
-    uses: cloudposse/github-actions-workflows-github-action-composite/.github/workflows/feature-branch.yml@readme-update
-    with:
-      organization: "${{ github.event.repository.owner.login }}"
-      repository: "${{ github.event.repository.name }}"
-      ref: "${{ github.event.pull_request.head.ref  }}"
+    uses: cloudposse/github-actions-workflows-github-action-composite/.github/workflows/feature-branch.yml@main
     secrets: inherit
