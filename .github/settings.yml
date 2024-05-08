@@ -1,19 +1,21 @@
 # These settings are synced to GitHub by https://probot.github.io/apps/settings/
 # extends: cloudposse/.github
 
-repository:
-  # A URL with more information about the repository
-  homepage: https://cloudposse.com
-
-  # Either `true` to enable projects for this repository, or `false` to disable them.
-  # If projects are disabled for the organization, passing `true` will cause an API error.
-  has_projects: false
-
-  # Either `true` to enable the wiki for this repository, `false` to disable it.
-  has_wiki: false
-
+# Upstream changes from _extends are only recognized when modifications are made to this file in the default branch.
+_extends: .github
 environments:
   - name: release2
     deployment_branch_policy:
       custom_branches:
         - main
+repository:
+  # A URL with more information about the repository
+  homepage: https://cloudposse.com
+  # Either `true` to enable projects for this repository, or `false` to disable them.
+  # If projects are disabled for the organization, passing `true` will cause an API error.
+  has_projects: false
+  # Either `true` to enable the wiki for this repository, `false` to disable it.
+  has_wiki: false
+  name: github-action-test-action
+  description: 'Github action for experiments '
+  topics: ""
