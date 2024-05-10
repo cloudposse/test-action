@@ -22,7 +22,3 @@ runs:
   using: 'node16'
   main: 'src/index.js'
   post: 'src/post.js'
-
-
-
-
