@@ -15,6 +15,7 @@ pull_request_rules:
       - and:
           - -merged
           - -closed
+    # If README.md is the only file changed in the PR
     - and:
         - "files=README.md"
         - "#files=1"
