@@ -1,0 +1,24 @@
+extends: .github
+
+# https://docs.mergify.io/conditions.html
+# https://docs.mergify.io/actions.html
+pull_request_rules:
+- name: "auto merge Readme PRs"
+  conditions:
+  - and:
+    - or:
+        - "author=cloudpossebot"
+        - "author=github-actions[bot]"
+        - "author=dependabot[bot]"
+        - "author=renovate[bot]"
+    - and:
+      - and:
+          - -merged
+          - -closed
+    # If README.md is the only file changed in the PR
+    - and:
+        - "files=README.md"
+        - "#files=1"
+  actions:
+    merge:
+      method: "squash"
