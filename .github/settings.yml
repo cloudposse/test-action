@@ -3,11 +3,6 @@
 
 # Upstream changes from _extends are only recognized when modifications are made to this file in the default branch.
 _extends: .github
-environments:
-  - name: release2
-    deployment_branch_policy:
-      custom_branches:
-        - main
 repository:
   # A URL with more information about the repository
   homepage: https://cloudposse.com
@@ -16,6 +11,6 @@ repository:
   has_projects: false
   # Either `true` to enable the wiki for this repository, `false` to disable it.
   has_wiki: false
-  name: github-action-test-action
-  description: 'Github action for experiments '
+  name: test-action
+  description: 'Github action for experiments'
   topics: ""
