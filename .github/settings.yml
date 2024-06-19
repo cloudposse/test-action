@@ -11,6 +11,6 @@ repository:
   has_projects: false
   # Either `true` to enable the wiki for this repository, `false` to disable it.
   has_wiki: false
-  name: github-action-test-action
+  name: test-action
   description: 'Github action for experiments'
   topics: ""
